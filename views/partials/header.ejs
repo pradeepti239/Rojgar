@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(137, 201, 226); box-shadow: none">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img style="padding-left: 5vw; height: 85%; width: 85%" src="../images/logo1.png"
+        alt="Logo" /></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-right: 7rem">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item services-dropdown" href="/serviceinfo#painter">Painter</a>
+            </li>
+            <li>
+              <a class="dropdown-item services-dropdown" href="/serviceinfo#mason">Mason</a>
+            </li>
+            <li>
+              <a class="dropdown-item services-dropdown" href="/serviceinfo#domestic">Domestic Help</a>
+            </li>
+            <li>
+              <a class="dropdown-item services-dropdown" href="/serviceinfo#plumber">Plumber</a>
+            </li>
+            <li>
+              <a class="dropdown-item services-dropdown" href="/serviceinfo#gardener">Gardener</a>
+            </li>
+            <li>
+              <a class="dropdown-item services-dropdown" href="/serviceinfo#laundary">Laundary Service</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item explore" href="/serviceinfo">Explore More</a>
+            </li>
+          </ul>
+        </li>
+        <%if(isLoggedIn){%>
+           <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/users/logout">Log Out</a>
+           </li>
+          <%}else{%>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/users/login" target="_blank">Log In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/users/signup" target="_blank">Sign Up</a>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>

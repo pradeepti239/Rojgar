@@ -1,0 +1,13 @@
+#title {
+  background-color:rgba(6, 142, 192, 0.808);
+}
+#Submitbutton {
+  /* background-color: #5cb85c; */
+  background-color:  rgb(46, 175, 226);
+
+  width: 150px;
+}
+
+.signup-div {
+  margin-top: 1vh;
+}

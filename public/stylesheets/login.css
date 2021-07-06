@@ -1,0 +1,16 @@
+.login-div {
+  border: 2px solid rgb(2, 81, 112);
+  text-align: center;
+  margin-top: 20vh;
+  height: 500px;
+  width: 400px;
+}
+h1 {
+  margin: auto;
+}
+.row {
+  height: 90px;
+  width: 396px;
+}
+
+
