@@ -12,10 +12,6 @@ var session = require("express-session");
 var passport = require("passport");
 require("./config/passport")(passport);
 
-const util = require("util");
-const multer = require('multer');
-const GridFsStorage = require("multer-gridfs-storage");
-
 //Routes
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
@@ -82,13 +78,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
+//routes
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/hire", hireRouter);
 app.use("/termspolicy", termspolicyRouter);
 app.use("/search", searchemployeeRouter);
-
-
 
 
 // catch 404 and forward to error handler

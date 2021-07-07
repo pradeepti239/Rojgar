@@ -11,11 +11,11 @@ function escapeRegex(text) {
 router.get("/searchemployee", async function (req, res, next) {
   var noMatch = 0;
   var noMatchmsg = "";
-  //Search books
+//Search location and service
   if (req.query.service && req.query.location) {
-      const regex = new RegExp(escapeRegex(req.query.service), "gi");
-      const regex2 = new RegExp(escapeRegex(req.query.location), "gi");
-    //Get searched books from db
+      const regex = new RegExp(escapeRegex(req.query.service), "gi"); //for service
+      const regex2 = new RegExp(escapeRegex(req.query.location), "gi"); //for location
+//get searched service and location from db
     ValidEmployees.find()
         .and({ address: regex2 })
         .or([ { mainskill: regex }, { otherskills: regex }])

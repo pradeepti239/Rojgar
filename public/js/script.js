@@ -28,12 +28,6 @@ $(document).ready(function () {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
-
-    // $('.seeMore').click(function () {
-    //     $('.aboutusRemaining').addClass("showRemaining")
-    // })
-
-    // owl carousel script
     $('.carousel').owlCarousel({
         margin: 20,
         loop: true,
@@ -83,7 +77,7 @@ if ($(".swiper-container").hasClass("team-member-slider")) {
             slideShadows: false
         },
         breakpoints: {
-            // when window width is <= 768px
+
             767: {
                 slidesPerView: 1,
                 centeredSlides: false,
@@ -91,7 +85,7 @@ if ($(".swiper-container").hasClass("team-member-slider")) {
             }
         }
     });
-    }
+}
 //for search bar
 // getting all required elements
 const searchWrapper = document.querySelector(".wrapper-search");
@@ -108,7 +102,6 @@ inputBox.onkeyup = (e) => {
     if (userData) {
         searchbtn.onclick = () => {
             webLink = `http://localhost:3000/serviceinfo#${userData}`;
-            // webLink = `https://www.google.com/search?q=${userData}`;
             linkTag.setAttribute("href", webLink);
             linkTag.click();
         }

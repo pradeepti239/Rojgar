@@ -47,9 +47,3 @@ const UserSchema = mongoose.Schema({
 });
 
 module.exports = mongoose.model("User", UserSchema);
-
-
-  // documentimage: {
-  //   data: Buffer,
-  //   contentType: String
-  // },

@@ -18,18 +18,11 @@
     <title>Rojgar</title>
     <link rel="stylesheet" href="../stylesheets/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/> -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
-
-
-
 </head>
-
 
 <body onload="mypreloader()">
     <div id="loading"></div>
@@ -40,34 +33,21 @@
     <!-- Navigation Bar Start-->
     <%- include("partials/header") %>
         <!-- Navigation Bar End -->
-        <!-- <img src="../images/Bg_with_text.jpg" class="img-fluid" style="width: 100%;"> -->
+
         <!-- Search section start -->
         <section class="searchBar">
             <div class="wrapper">
                 <div class="search-icon"></div>
-
-                <!-- Request of Hire Stored message -->
-                <% if (hireMessage.length> 0) { %>
-                    <div id="hireMessageDiv" style="background-color: alert; z-index: 9999999999; height: 50px;"
-                        class="alert alert-success alert-dismissible  fade show " role="alert">
-                        <%= hireMessage %>
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"
-                                onclick="closebutton()">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                    </div>
-                <% } %>
-
-                    <!-- Home Image -->
+                
+                <!-- Home Image -->
                 <img src="../images/Bg_with_text.jpg" class="img-fluid" style="width: 100%;">
 
                 <div class="wrapper-search" style="margin-top:-23%; margin-bottom: 15%;">
                     <form method="GET" action="/search/searchemployee">
-                        <!-- <h1> Cities where we work <i class="fas fa-map-marker-alt"></i></h1> -->
                         <div class="form-box">
 
                             <!-- Services -->
-                            <input type="text" id="service" name="service" class="search-field skillss " 
+                            <input type="text" id="service" name="service" class="search-field skillss "
                                 placeholder="Search for Service">
 
 
@@ -85,15 +65,13 @@
                     </form>
 
                 </div>
-                                
-                </div>
 
-                </div>
+            </div>
+
+            </div>
         </section>
         <!-- Search section ends -->
 
-        <!-- City where we work -->
-       
         <!-- Popular services section start -->
         <section class="services" id="services">
             <div class="max-width">

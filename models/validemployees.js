@@ -43,8 +43,3 @@ const ValidEmployeesSchema = mongoose.Schema({
 
 module.exports = mongoose.model("ValidEmployees", ValidEmployeesSchema);
 
-
-  // documentimage: {
-  //   data: Buffer,
-  //   contentType: String
-  // },

@@ -1,65 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Log In</title>
 
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"/>
-        <link rel="stylesheet" href="../stylesheets/login.css">
-    </head>
-    <body style="background-color: #e6fbff">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
 
- 
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+    <link rel="stylesheet" href="../stylesheets/login.css">
+</head>
 
-            <div class="container login-div" >
-            <div class="row" style="background-color:rgba(6, 142, 192, 0.808);">
-                <h1><i class="fa fa-lock" aria-hidden="true"></i> Login</h1>
-            </div><br /><br />
+<body style="background-color: #e6fbff">
+
+    <div class="container login-div">
+        <div class="row" style="background-color:rgba(6, 142, 192, 0.808);">
+            <h1><i class="fa fa-lock" aria-hidden="true"></i> Login</h1>
+        </div><br /><br />
         <%- include('partials/messages') %>
 
-        <!-- Successful signup Message -->
-        <% if (signinMessage.length> 0) { %>
-            <div id="signinDiv" style="background-color: alert;"
-                class="alert alert-success alert-dismissible  fade show " role="alert">
-                <%= signinMessage %>
-                    
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"
-                        onclick="closebutton()">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-            </div>
-            <% } %>
+            <!-- Successful signup Message -->
+            <% if (signinMessage.length> 0) { %>
+                <div id="signinDiv" style="background-color: alert;"
+                    class="alert alert-success alert-dismissible  fade show " role="alert">
+                    <%= signinMessage %>
 
-            <form method="POST"  action="/users/login">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"
+                            onclick="closebutton()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                 </div>
-                <input type="string" name="username" id="username" class="form-control" placeholder="Enter Username" required/>
-            </div><br />
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fa fa-key icon"></i></span>
-                </div>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Password" required/>
-            </div><br />
-            
-            <button type="submit" class="btn btn-success" style="background-color: rgb(46, 175, 226);"><span class="glyphicon glyphicon-off"></span> Login</button>
-                
-            <button type="submit" class="btn btn-info" style="background-color: rgb(137, 201, 226);;"><span class="glyphicon glyphicon-remove" ></span>Login with Gmail </button><br />
-                <br /> <center><div style="border:1px solid black;height:1px;width:300px;"></div></center><br />
-            <div class="footer">
-                <p>Don't Have an Account? <br><a href="/users/signup" style="text-decoration: none; color: rgb(26, 23, 230);">Sign Up Here</a></p>
-            </div>
-        </div>
-  
-    </body>
+                <% } %>
+
+                    <form method="POST" action="/users/login">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                            </div>
+                            <input type="string" name="username" id="username" class="form-control"
+                                placeholder="Enter Username" required />
+                        </div><br />
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-key icon"></i></span>
+                            </div>
+                            <input type="password" name="password" id="password" class="form-control"
+                                placeholder="Password" required />
+                        </div><br />
+
+                        <button type="submit" class="btn btn-success" style="background-color: rgb(46, 175, 226);"><span
+                                class="glyphicon glyphicon-off"></span> Login</button>
+
+                        <button type="submit" class="btn btn-info" style="background-color: rgb(137, 201, 226);;"><span
+                                class="glyphicon glyphicon-remove"></span>Login with Gmail </button><br />
+                        <br />
+                        <center>
+                            <div style="border:1px solid black;height:1px;width:300px;"></div>
+                        </center><br />
+                        <div class="footer">
+                            <p>Don't Have an Account? <br><a href="/users/signup"
+                                    style="text-decoration: none; color: rgb(26, 23, 230);">Sign Up Here</a></p>
+                        </div>
+    </div>
+
+</body>
+
 </html>
 <script>
     var signinDiv = document.getElementById("signinDiv");
-        function closebutton() {
-            signinDiv.remove();
-        }
- </script>
+    function closebutton() {
+        signinDiv.remove();
+    }
+</script>
